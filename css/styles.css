@@ -1,0 +1,25 @@
+/* rubik-regular - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: "Rubik";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../fonts/rubik-v31-latin-regular.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+/* rubik-500 - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: "Rubik";
+  font-style: normal;
+  font-weight: 500;
+  src: url("../fonts/rubik-v31-latin-500.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+:root {
+  --primary-blue-600: hsl(231. 69%, 60%);
+  --primary-red-400: hsl(0, 94%, 66%);
+  --neutral-grey-50: hsl(0, 0%, 97%);
+  --neutral-blue-950: hsl(229, 31%, 21%);
+  --font-body: calc(18 / 16 * 1rem);
+  --font-weight-400: 400;
+  --font-weight-500: 500;
+}/*# sourceMappingURL=styles.css.map */
