@@ -17,8 +17,5 @@ hamburger.addEventListener("click", () => {
         logo.setAttribute("src", "images/logo-bookmark.svg");
         menu.setAttribute("aria-hidden", true);
         menu.classList.remove("show");
-    }
-    
-
-    
+    } 
 });

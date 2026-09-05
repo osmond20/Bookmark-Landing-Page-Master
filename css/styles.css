@@ -18,6 +18,8 @@
   --primary-blue-600: hsl(231, 69%, 60%);
   --primary-red-400: hsl(0, 94%, 66%);
   --neutral-grey-50: hsl(0, 0%, 97%);
+  --neutral-grey: hsl(0, 0%, 73%);
+  --white:hsl(0, 0%, 100%);
   --neutral-blue-950: hsl(229, 30%, 22%);
   --font: "Rubik", sans-serif;
   --font-size-body: calc(18 / 16 * 1rem);
@@ -70,6 +72,7 @@ body {
   font-size: var(--font-size-body);
 }
 
+/*NAVIGATIONAL BAR*/
 .nav-component {
   width: 100%;
   height: 5.5rem;
@@ -102,6 +105,11 @@ body {
   height: 1rem;
 }
 
+.nav-links-container-2 {
+  opacity: 0;
+}
+
+/*MENU*/
 .menu-component {
   position: absolute;
   top: 0;
@@ -167,10 +175,105 @@ body {
   justify-content: center;
 }
 
-.nav-links-container-2 {
-  display: none;
+.main-content {
+  flex: 1;
+  width: 100%;
 }
 
+/*Intro Component*/
+.intro-component {
+  padding-block-start: 1rem;
+  padding-block-end: 5rem;
+  padding-inline: 10%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  position: relative;
+  gap: 3.5rem;
+}
+
+.image-holder {
+  position: relative;
+}
+
+.background-el {
+  width: 100%;
+  height: 80%;
+  background-color: var(--primary-blue-600);
+  position: absolute;
+  top: 3.25rem;
+  left: 2.5rem;
+  right: -4.9375rem;
+  border-top-left-radius: 5rem;
+  border-bottom-left-radius: 5rem;
+}
+
+.illustration-hero {
+  position: relative;
+  z-index: 10;
+  width: 17.5rem;
+  height: 12.4375rem;
+}
+
+.intro-component-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.intro-title {
+  font-size: 1.625rem;
+  font-weight: var(--font-weight-500);
+  text-align: center;
+  padding-block-end: 1.5rem;
+}
+
+.intro-paragraph {
+  font-size: 0.84375rem;
+  color: var(--neutral-grey);
+  padding-block-end: 2.25rem;
+  text-align: center;
+}
+
+.intro-link-holder {
+  height: 2.8125rem;
+  display: flex;
+  gap: 0.3125rem;
+  justify-content: center;
+  width: 100%;
+}
+
+.intro-link-1 {
+  display: block;
+  width: 45%;
+  font-size: 0.625rem;
+  font-weight: 500;
+  background-color: var(--primary-blue-600);
+  height: 100%;
+  text-align: center;
+  padding-block: 1rem;
+  border-radius: 0.25rem;
+  color: var(--white);
+}
+
+.intro-link-2 {
+  display: block;
+  width: 45%;
+  font-size: 0.625rem;
+  font-weight: 500;
+  height: 100%;
+  background-color: var(--neutral-grey-50);
+  text-align: center;
+  padding-block: 1rem;
+  border-radius: 0.25rem;
+  color: var(--neutral-grey);
+}
+
+@media (min-width: 48rem) {
+  .nav-links-container-2 {
+    opacity: 1;
+  }
+}
 @media (prefers-reduced-motion: reduce) {
   .links {
     transition: color 0.5s ease;
