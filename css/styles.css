@@ -184,26 +184,28 @@ body {
 .intro-component {
   padding-block-start: 1rem;
   padding-block-end: 5rem;
-  padding-inline: 10%;
   display: flex;
   align-items: center;
   flex-direction: column;
   position: relative;
   gap: 3.5rem;
+  width: 100%;
 }
 
 .image-holder {
   position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: center;
 }
 
 .background-el {
-  width: 100%;
+  width: clamp(16.875rem, 44.1vw + 118.2px, 18.75rem);
   height: 80%;
   background-color: var(--primary-blue-600);
   position: absolute;
   top: 3.25rem;
-  left: 2.5rem;
-  right: -4.9375rem;
+  right: 0;
   border-top-left-radius: 5rem;
   border-bottom-left-radius: 5rem;
 }
@@ -219,6 +221,8 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  margin-block-end: 1.25rem;
+  padding-inline: 10%;
 }
 
 .intro-title {
@@ -236,7 +240,7 @@ body {
 }
 
 .intro-link-holder {
-  height: 2.8125rem;
+  height: 2.5rem;
   display: flex;
   gap: 0.3125rem;
   justify-content: center;
@@ -251,7 +255,7 @@ body {
   background-color: var(--primary-blue-600);
   height: 100%;
   text-align: center;
-  padding-block: 1rem;
+  padding-block: 0.85rem;
   border-radius: 0.25rem;
   color: var(--white);
 }
@@ -264,8 +268,29 @@ body {
   height: 100%;
   background-color: var(--neutral-grey-50);
   text-align: center;
-  padding-block: 1rem;
+  padding-block: 0.85rem;
   border-radius: 0.25rem;
+  color: var(--neutral-grey);
+}
+
+.features-component {
+  display: flex;
+  flex-direction: column;
+  padding-inline: 10%;
+  padding-block-start: 1.25rem;
+  justify-content: center;
+}
+
+.features-title {
+  text-align: center;
+  font-weight: var(--font-weight-500);
+  margin-block-end: 1rem;
+}
+
+.features-paragraph {
+  text-align: center;
+  margin-block-end: 1rem;
+  font-size: 0.84375rem;
   color: var(--neutral-grey);
 }
 
