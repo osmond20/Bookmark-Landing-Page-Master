@@ -25,6 +25,7 @@
   --font-size-body: calc(18 / 16 * 1rem);
   --font-weight-400: 400;
   --font-weight-500: 500;
+  --button-border: 1px solid hsl(0, 0%, 91%);
 }
 
 /* || RESET */
@@ -289,9 +290,43 @@ body {
 
 .features-paragraph {
   text-align: center;
-  margin-block-end: 1rem;
+  margin-block-end: 3rem;
   font-size: 0.84375rem;
   color: var(--neutral-grey);
+}
+
+.button-features {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin-block-end: 4rem;
+}
+
+.toggleBtn {
+  height: 3.3125rem;
+  width: 100%;
+  border-top: var(--button-border);
+  font-size: 0.875rem;
+  background-image: linear-gradient(90deg, var(--primary-red-400), var(--primary-red-400));
+  background-size: 0 4px;
+  background-repeat: no-repeat;
+  background-position: 50% 103.3%;
+  transition: background-size 0.5s ease, background-position-x 0.5s ease;
+}
+
+.toggleBtn:first-child {
+  background-position: 50% 105%;
+}
+
+.toggleBtn:last-child {
+  border-bottom: var(--button-border);
+  background-position: 50% 100%;
+}
+
+.toggleBtn:hover {
+  background-size: 45% 4px;
+  background-position-x: 50%;
+  cursor: pointer;
 }
 
 @media (min-width: 48rem) {
