@@ -2,6 +2,7 @@ const nav = document.querySelector(".nav-component")
 const hamburger = document.querySelector(".icon-hamburger");
 const logo = document.querySelector(".logo-bookmark");
 const menu = document.querySelector(".menu-component");
+const toggleBtn = document.querySelectorAll(".toggleBtn");
 
 hamburger.addEventListener("click", () => {
     let isOpen = nav.classList.toggle('toggle');
@@ -19,3 +20,15 @@ hamburger.addEventListener("click", () => {
         menu.classList.remove("show");
     } 
 });
+
+
+
+toggleBtn.forEach(button =>{
+    button.addEventListener("click", ()=>{
+           toggleBtn.forEach(otherButton =>{
+            otherButton.classList.remove("active");
+           });
+
+            button.classList.toggle("active");
+    });
+})
