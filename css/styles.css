@@ -342,20 +342,40 @@ body {
   border-bottom-right-radius: 5rem;
 }
 
-.features-content-holder {
+.feature-panel {
   width: 100%;
   z-index: 10;
   top: 400px;
   left: -5px;
-  display: flex;
   flex-direction: column;
   align-items: center;
   gap: 0.625rem;
 }
 
 .feature-image {
-  width: 16.5625rem;
-  height: 10.3125rem;
+  position: relative;
+  width: 17.375rem;
+  height: 11.1875rem;
+  z-index: 10;
+  left: 10px;
+  bottom: 15px;
+}
+
+.feature-image-2, .feature-image-3 {
+  position: relative;
+  width: 18.125rem;
+  height: 12.5rem;
+  z-index: 10;
+  left: 25px;
+  bottom: 15px;
+}
+
+.feature-panel-content {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  gap: 0.625rem;
 }
 
 .features-content-title {

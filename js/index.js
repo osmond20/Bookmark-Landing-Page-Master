@@ -3,6 +3,7 @@ const hamburger = document.querySelector(".icon-hamburger");
 const logo = document.querySelector(".logo-bookmark");
 const menu = document.querySelector(".menu-component");
 const toggleBtn = document.querySelectorAll(".toggleBtn");
+const featurePanels = document.querySelectorAll(".feature-panel");
 
 hamburger.addEventListener("click", () => {
     let isOpen = nav.classList.toggle('toggle');
@@ -21,14 +22,25 @@ hamburger.addEventListener("click", () => {
     } 
 });
 
-
-
 toggleBtn.forEach(button =>{
-    button.addEventListener("click", ()=>{
-           toggleBtn.forEach(otherButton =>{
+    button.addEventListener("click", () =>{
+        // remove the "active" class from all buttons
+        toggleBtn.forEach(otherButton =>{
             otherButton.classList.remove("active");
-           });
+        });
 
-            button.classList.toggle("active");
+        // hide all panels before showing the user requested panel
+        featurePanels.forEach(panel =>{
+            panel.hidden = true;
+        });
+
+        // add the "active" state to the selected button
+        button.classList.add("active");
+
+        // gets the exact panel
+        const targetPanel = document.getElementById(button.dataset.target);
+        
+        // show the requested panel
+        targetPanel.hidden = false;
     });
-})
+});

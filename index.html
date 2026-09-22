@@ -74,18 +74,40 @@
       Your bookmarks sync between your devices so you can access them on the go.
     </p>
     <div class="button-features">
-      <button class="toggleBtn active">Simple Bookmarking</button>
-      <button class="toggleBtn">Speedy sharing</button>
-      <button class="toggleBtn">Easy Sharing</button>
+      <button class="toggleBtn active" data-target="feature-1">Simple Bookmarking</button>
+      <button class="toggleBtn" data-target="feature-2">Speedy sharing</button>
+      <button class="toggleBtn" data-target="feature-3">Easy Sharing</button>
     </div>
     <div class="background-el-2"></div>
-    <div class="features-content-holder">
+    <div class="feature-panel" id="feature-1">
       <img class="feature-image" src="images/illustration-features-tab-1.svg" alt="feature 1 picture" height="50" width="50">
-      <h2 class="features-content-title">Bookmark in one click</h2>
-      <p class="features-paragraph">
-         Organize your bookmarks however you like. Our simple drag-and-drop interface 
-          gives you complete control over how you manage your favourite sites.
-      </p>
+      <div class="feature-panel-content">
+        <h2 class="features-content-title">Bookmark in one click</h2>
+        <p class="features-paragraph">
+          Organize your bookmarks however you like. Our simple drag-and-drop interface 
+            gives you complete control over how you manage your favourite sites.
+        </p>
+      </div>
+    </div>
+    <div class="feature-panel" id="feature-2" hidden>
+      <img class="feature-image-2" src="images/illustration-features-tab-2.svg" alt="feature 1 picture" height="50" width="50">
+      <div class="feature-panel-content">
+          <h2 class="features-content-title">Intelligent search</h2>
+          <p class="features-paragraph">
+           Our powerful search feature will help you find saved sites in no time at all. 
+            No need to trawl through all of your bookmarks.
+          </p>
+      </div>
+    </div>
+    <div class="feature-panel" id="feature-3" hidden>
+      <img class="feature-image-3" src="images/illustration-features-tab-3.svg" alt="feature 1 picture" height="50" width="50">
+      <div class="feature-panel-content">
+        <h2 class="features-content-title">Share your bookmarks</h2>
+        <p class="features-paragraph">
+          Easily share your bookmarks and collections with others. Create a shareable 
+          link that you can send at the click of a button.
+        </p>
+      </div>
     </div>
   </section>
   <section class="download-component"></section>
