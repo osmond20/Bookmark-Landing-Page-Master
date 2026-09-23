@@ -282,6 +282,7 @@ body{
   padding-block-start: calc(20 / 16 * 1rem);
   justify-content: center;
   position: relative;
+  padding-block-end: calc(20 / 16 * 1rem);
 }
 
 .features-title{
@@ -384,6 +385,95 @@ body{
   font-weight: var(--font-weight-500);
   font-size: calc(20 / 16 * 1rem);
   margin-block-start: 3rem;
+}
+
+.more-info-btn{
+  display: none;
+}
+
+.download-component{
+  padding-inline: 10%;
+  padding-block: calc(20 / 16 * 1rem);
+}
+
+.download-title{
+  text-align: center;
+  font-weight: var(--font-weight-500);
+  font-size: calc(20 / 16 * 1rem);
+  margin-block-start: 3rem;
+}
+
+.download-paragraph{
+  text-align: center;
+  margin-block-start: calc(24 / 16 * 1rem);
+  font-size: calc(13.5 / 16 * 1rem);
+  color:var(--neutral-grey);
+  margin-block-end: calc(54 / 16 * 1rem);
+}
+
+.download-cards{
+  padding-inline: calc(25/ 16 * 1rem);
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.card{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: calc(250 / 16 * 1rem);
+  padding-block-end: calc(24 / 16 * 1rem);
+  box-shadow: 0 3px 3px 2px var(--neutral-grey-50);
+  padding-inline: calc(20 / 16 * 1rem);
+  border-radius: calc(10 / 16 * 1rem);
+  padding-block-start: calc(20 / 16 * 1rem);
+}
+
+.card-title{
+  font-size: 1rem;
+  font-weight: 500;
+  margin-block-start: calc(20 / 16 * 1rem);
+  margin-block-end: calc(10 / 16 * 1rem);
+}
+
+
+.card-pg{
+  font-size: calc(12 / 16 * 1rem);
+  margin-block-end: calc(24 / 16 * 1rem);
+  color:var(--neutral-grey);
+}
+
+.dots{
+  position: relative;
+  top: 5px;
+  width: calc(100% + 40px);
+  max-width: none;
+}
+
+.download-link{
+  display: block;
+  margin-block-start: calc(24 / 16 * 1rem);
+  font-size: calc(12 / 16 * 1rem);
+  background-color: var(--primary-blue-600);
+  border-radius: calc(5 / 16 * 1rem);
+  height: calc(44 / 16 * 1rem);
+  margin-inline: calc(24 / 16 * 1rem);
+  padding-block: calc(14 / 16 * 1rem);
+  width: 100%;
+  text-align: center;
+  color: var(--white);
+  font-weight: 500;
+  transform: translateY(0);
+  transition: transform 0.3s ease;
+}
+
+.download-link:hover{
+  transform: translateY(-3px);
+  opacity:0.9;
 }
 @media(min-width:48rem){
   .nav-links-container-2{

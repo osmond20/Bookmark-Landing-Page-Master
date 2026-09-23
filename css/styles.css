@@ -281,6 +281,7 @@ body {
   padding-block-start: 1.25rem;
   justify-content: center;
   position: relative;
+  padding-block-end: 1.25rem;
 }
 
 .features-title {
@@ -383,6 +384,94 @@ body {
   font-weight: var(--font-weight-500);
   font-size: 1.25rem;
   margin-block-start: 3rem;
+}
+
+.more-info-btn {
+  display: none;
+}
+
+.download-component {
+  padding-inline: 10%;
+  padding-block: 1.25rem;
+}
+
+.download-title {
+  text-align: center;
+  font-weight: var(--font-weight-500);
+  font-size: 1.25rem;
+  margin-block-start: 3rem;
+}
+
+.download-paragraph {
+  text-align: center;
+  margin-block-start: 1.5rem;
+  font-size: 0.84375rem;
+  color: var(--neutral-grey);
+  margin-block-end: 3.375rem;
+}
+
+.download-cards {
+  padding-inline: 1.5625rem;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 15.625rem;
+  padding-block-end: 1.5rem;
+  box-shadow: 0 3px 3px 2px var(--neutral-grey-50);
+  padding-inline: 1.25rem;
+  border-radius: 0.625rem;
+  padding-block-start: 1.25rem;
+}
+
+.card-title {
+  font-size: 1rem;
+  font-weight: 500;
+  margin-block-start: 1.25rem;
+  margin-block-end: 0.625rem;
+}
+
+.card-pg {
+  font-size: 0.75rem;
+  margin-block-end: 1.5rem;
+  color: var(--neutral-grey);
+}
+
+.dots {
+  position: relative;
+  top: 5px;
+  width: calc(100% + 40px);
+  max-width: none;
+}
+
+.download-link {
+  display: block;
+  margin-block-start: 1.5rem;
+  font-size: 0.75rem;
+  background-color: var(--primary-blue-600);
+  border-radius: 0.3125rem;
+  height: 2.75rem;
+  margin-inline: 1.5rem;
+  padding-block: 0.875rem;
+  width: 100%;
+  text-align: center;
+  color: var(--white);
+  font-weight: 500;
+  transform: translateY(0);
+  transition: transform 0.3s ease;
+}
+
+.download-link:hover {
+  transform: translateY(-3px);
+  opacity: 0.9;
 }
 
 @media (min-width: 48rem) {
