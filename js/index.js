@@ -4,6 +4,9 @@ const logo = document.querySelector(".logo-bookmark");
 const menu = document.querySelector(".menu-component");
 const toggleBtn = document.querySelectorAll(".toggleBtn");
 const featurePanels = document.querySelectorAll(".feature-panel");
+const questions = document.querySelectorAll(".question");
+const arrowBtns = document.querySelectorAll(".arrow-btn");
+const answers = document.querySelectorAll(".answer-component");
 
 hamburger.addEventListener("click", () => {
     let isOpen = nav.classList.toggle('toggle');
@@ -42,5 +45,29 @@ toggleBtn.forEach(button =>{
         
         // show the requested panel
         targetPanel.hidden = false;
+    });
+});
+
+
+arrowBtns.forEach(button =>{
+    button.addEventListener("click", ()=>{
+        const isOpen = button.classList.contains("active");
+        if(!isOpen){
+                arrowBtns.forEach(otherButton =>{
+                otherButton.classList.remove("active");
+                const answer = document.getElementById(otherButton.dataset.target);
+                answer.hidden = true;
+            });
+            button.classList.add("active");
+            const targetAnswer = document.getElementById(button.dataset.target);
+            targetAnswer.hidden = false;
+        }
+        else if(isOpen){
+              arrowBtns.forEach(otherButton =>{
+                otherButton.classList.remove("active");
+                const answer = document.getElementById(otherButton.dataset.target);
+                answer.hidden = true;
+            });
+        }
     });
 });

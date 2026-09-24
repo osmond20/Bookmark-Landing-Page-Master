@@ -336,7 +336,7 @@ body {
   position: absolute;
   left: 0;
   top: 440px;
-  width: 11.875rem;
+  width: 18.75rem;
   height: 8.75rem;
   background-color: var(--primary-blue-600);
   border-top-right-radius: 5rem;
@@ -364,8 +364,8 @@ body {
 
 .feature-image-2, .feature-image-3 {
   position: relative;
-  width: 18.125rem;
-  height: 12.5rem;
+  width: 15.9375rem;
+  height: 11.25rem;
   z-index: 10;
   left: 25px;
   bottom: 15px;
@@ -427,7 +427,7 @@ body {
   width: 15.3125rem;
   height: 15.625rem;
   padding-block-end: 1.5rem;
-  box-shadow: 0 3px 3px 2px var(--neutral-grey-50);
+  box-shadow: 0 4px 4px 3px var(--neutral-grey-50);
   padding-inline: 1.25rem;
   border-radius: 0.625rem;
   padding-block-start: 1.25rem;
@@ -473,6 +473,75 @@ body {
 .download-link:hover {
   transform: translateY(-3px);
   opacity: 0.9;
+}
+
+.faq-component {
+  margin-block-start: 5rem;
+}
+
+.faq-title {
+  text-align: center;
+  font-weight: var(--font-weight-500);
+  font-size: 1.25rem;
+  margin-block-start: 3rem;
+}
+
+.faq-paragraph {
+  text-align: center;
+  margin-block-start: 1.5rem;
+  font-size: 0.84375rem;
+  color: var(--neutral-grey);
+  padding-inline: 10%;
+  margin-block-end: 3.375rem;
+}
+
+.faq-qna-container {
+  padding-inline: 10%;
+  margin-block-end: 3.375rem;
+}
+
+.qna-component {
+  border-top: 1px solid var(--neutral-grey);
+}
+
+.qna-component:last-child {
+  border-bottom: 1px solid var(--neutral-grey);
+}
+
+.question-component {
+  display: flex;
+  height: 3.75rem;
+  width: 100%;
+  gap: 0.625rem;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.question {
+  font-size: 0.875rem;
+}
+
+.arrow-btn {
+  height: 0.625rem;
+  width: 0.8125rem;
+  filter: 0;
+  transition: filter 0.3s ease;
+}
+
+.arrow-btn:hover {
+  filter: invert(28%) sepia(96%) saturate(7483%) hue-rotate(1deg) brightness(97%) contrast(107%);
+}
+
+.arrow-btn.active {
+  transform: rotateX(180deg);
+  transition: transform 0.3s ease;
+  filter: invert(28%) sepia(96%) saturate(7483%) hue-rotate(1deg) brightness(97%) contrast(107%);
+}
+
+.answer {
+  font-size: 0.84375rem;
+  color: var(--neutral-grey);
+  margin-block-end: 1.25rem;
 }
 
 @media (min-width: 48rem) {
