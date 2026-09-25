@@ -473,6 +473,7 @@ body {
 .download-link:hover {
   transform: translateY(-3px);
   opacity: 0.9;
+  cursor: pointer;
 }
 
 .faq-component {
@@ -530,6 +531,7 @@ body {
 
 .arrow-btn:hover {
   filter: invert(28%) sepia(96%) saturate(7483%) hue-rotate(1deg) brightness(97%) contrast(107%);
+  cursor: pointer;
 }
 
 .arrow-btn.active {
@@ -542,6 +544,26 @@ body {
   font-size: 0.84375rem;
   color: var(--neutral-grey);
   margin-block-end: 1.25rem;
+}
+
+.more-info-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 2.5rem;
+  width: 5rem;
+  font-size: 0.75rem;
+  font-weight: 500;
+  border-radius: 0.3125rem;
+  color: var(--white);
+  background-color: var(--primary-blue-600);
+  margin: auto;
+  transition: transform 0.3s ease;
+}
+
+.more-info-link:hover {
+  transform: translateY(-2px);
+  cursor: pointer;
 }
 
 @media (min-width: 48rem) {
@@ -558,5 +580,14 @@ body {
   }
   .toggleBtn {
     transition: background-size 0.5s ease-in, background-position-x 0.5s ease-in;
+  }
+  .download-link {
+    transition: transform 0.5s ease;
+  }
+  .arrow-btn {
+    transition: filter 0.5s ease;
+  }
+  .more-info-link {
+    transition: transform 0.5s ease;
   }
 }/*# sourceMappingURL=styles.css.map */
