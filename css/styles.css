@@ -647,7 +647,7 @@ body {
 .icon-links-2 {
   display: flex;
   align-items: center;
-  gap: 2.5rem;
+  gap: 2.8125rem;
 }
 
 @media (min-width: 48rem) {
