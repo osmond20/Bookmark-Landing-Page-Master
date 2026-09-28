@@ -583,7 +583,7 @@ body {
 .ending-paragraph {
   font-size: 0.6875rem;
   letter-spacing: 0.2em;
-  margin-block-end: 1.25rem;
+  margin-block-end: 1.875rem;
 }
 
 .ending-title {
@@ -598,7 +598,6 @@ body {
   flex-direction: column;
   align-items: center;
   width: 100%;
-  gap: 0.8125rem;
 }
 
 .email-input {
@@ -606,12 +605,53 @@ body {
   font-size: 0.875rem;
   color: var(--neutral-grey-50);
   border-radius: 0.3125rem;
-  background-color: white;
+  background-color: var(--white);
   width: 100%;
   padding-inline-start: 1.25rem;
+  color: var(--neutral-grey);
+}
+
+.email-input.error {
+  transition: border 0.5s ease;
+  border: 2px solid var(--primary-red-400);
+}
+
+.error-container {
+  position: relative;
+  font-size: 0.625rem;
+  font-style: italic;
+  height: 1.25rem;
+  padding-block-start: 0.1875rem;
+  padding-inline-start: 0.3125rem;
+  background-color: var(--primary-red-400);
+  width: 100%;
+  top: -22.5px;
+  border-bottom-right-radius: 0.3125rem;
+  border-bottom-left-radius: 0.3125rem;
+  font-weight: 500;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+
+.error-container.display {
+  opacity: 1;
+}
+
+.error-icon {
+  position: relative;
+  top: -33.5px;
+  left: 145px;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+
+.error-icon.display {
+  opacity: 1;
 }
 
 .contact-us-btn {
+  position: relative;
+  top: -15px;
   width: 100%;
   background-color: var(--primary-red-400);
   font-size: 0.875rem;

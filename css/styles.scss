@@ -584,7 +584,7 @@ body{
 .ending-paragraph{
   font-size: calc(11 / 16 * 1rem);
   letter-spacing: 0.2em;
-  margin-block-end: calc(20 / 16 * 1rem);
+  margin-block-end: calc(30 / 16 * 1rem);
 }
 
 .ending-title{
@@ -599,7 +599,6 @@ body{
   flex-direction: column;
   align-items: center;
   width: 100%;
-  gap: calc(13 / 16 * 1rem);
 }
 
 .email-input{
@@ -607,12 +606,53 @@ body{
   font-size: calc(14 / 16 * 1rem);
   color: var(--neutral-grey-50);
   border-radius: calc(5 / 16 * 1rem);
-  background-color: white;
+  background-color: var(--white);
   width: 100%;
   padding-inline-start: calc(20 / 16 * 1rem);
+  color:var(--neutral-grey);
+}
+
+.email-input.error{
+  transition: border 0.5s ease;
+  border: 2px solid var(--primary-red-400);
+}
+
+.error-container{
+  position: relative;
+  font-size: calc(10 / 16 * 1rem);
+  font-style: italic;
+  height: calc(20 / 16 * 1rem);
+  padding-block-start: calc(3 / 16 * 1rem);
+  padding-inline-start: calc(5 / 16 * 1rem);
+  background-color: var(--primary-red-400);
+  width: 100%;
+  top: -22.5px;
+  border-bottom-right-radius: calc(5 / 16 * 1rem);
+  border-bottom-left-radius: calc(5 / 16 * 1rem);
+  font-weight: 500;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+
+.error-container.display{
+  opacity:1;
+}
+
+.error-icon{
+  position:relative;
+  top:-33.5px;
+  left:145px;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+
+.error-icon.display{
+  opacity: 1;
 }
 
 .contact-us-btn{
+  position: relative;
+  top: -15px;
   width: 100%;
   background-color: var(--primary-red-400);
   font-size: calc(14 / 16 * 1rem);
@@ -650,6 +690,8 @@ body{
   align-items: center;
   gap: calc(45 / 16 * 1rem);
 }
+
+
 
 @media(min-width:48rem){
   .nav-links-container-2{

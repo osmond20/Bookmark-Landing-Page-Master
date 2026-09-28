@@ -7,6 +7,10 @@ const featurePanels = document.querySelectorAll(".feature-panel");
 const questions = document.querySelectorAll(".question");
 const arrowBtns = document.querySelectorAll(".arrow-btn");
 const answers = document.querySelectorAll(".answer-component");
+const contactForm = document.querySelector(".contact-us-container");
+const contactInput = document.querySelector(".email-input");
+const errorMessage = document.querySelector(".error-container");
+const errorIcon = document.querySelector(".error-icon");
 
 hamburger.addEventListener("click", () => {
     let isOpen = nav.classList.toggle('toggle');
@@ -71,3 +75,35 @@ arrowBtns.forEach(button =>{
         }
     });
 });
+
+// email validation
+function isValidEmail(email){
+    if(typeof email !== "string"){
+        return false;
+    }
+
+    email = email.trim();
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/;
+    return emailRegex.test(email);
+}
+
+contactForm.addEventListener("submit", event=>{
+    let isValid = true;
+
+    const invalidEmail = contactInput.type === 'email' && !isValidEmail(contactInput.value);
+    if(contactInput.value.trim() === '' || invalidEmail){
+        contactInput.classList.add('error');
+        errorMessage.classList.add('display');
+        errorIcon.classList.add('display');
+        isValid = false;
+    }
+    else{
+        contactInput.classList.remove('error');
+        errorMessage.classList.remove('display');
+        errorIcon.classList.remove('display');
+    }
+
+    if(!isValid){
+        event.preventDefault();
+    }
+})

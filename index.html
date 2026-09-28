@@ -197,10 +197,14 @@
   <section class="ending-component">
     <p class="ending-paragraph">35,000+ ALREADY JOINED</p>
     <h2 class="ending-title">Stay up-to-date with what we’re doing</h2>
-    <div class="contact-us-container">
+    <form class="contact-us-container" novalidate autocomplete="on">
       <input class="email-input" type="email" placeholder="Enter your email address" name="email">
-      <button class="contact-us-btn" type="button">Contact Us</button>
-    </div>
+      <img class="error-icon" src="images/icon-error.svg" alt="" height="20" width="20">
+      <div class="error-container">
+        <p>Whoops, make sure it's an email</p>
+      </div>
+      <button class="contact-us-btn" type="submit">Contact Us</button>
+    </form>
   </section>
 </main>
 <footer class="footer-container">
