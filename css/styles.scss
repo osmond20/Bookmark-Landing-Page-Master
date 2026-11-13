@@ -108,7 +108,7 @@ body{
 }
 
 .nav-links-container-2{
-  opacity:0;
+  display: none;
 }
 
 /*MENU*/
@@ -261,7 +261,8 @@ body{
   text-align: center;
   padding-block: 0.85rem;
   border-radius: calc(4 / 16 * 1rem);
-  color:var(--white)
+  color:var(--white);
+  transition: background-color 0.3s ease;
 }
 .intro-link-2{
   display: block;
@@ -274,6 +275,8 @@ body{
   padding-block: 0.85rem;
   border-radius: calc(4 / 16 * 1rem);
   color:var(--neutral-grey);
+  transition: background-color 0.3s ease;
+  box-shadow: 1px 1px 2px 0px  var(--neutral-grey);
 }
 
 .features-component{
@@ -660,6 +663,12 @@ body{
   color: var(--white);
   height: calc(45 / 16 * 1rem);
   border-radius: calc(5 / 16 * 1rem);
+  transition: opacity 0.3s ease;
+}
+
+.contact-us-btn:hover{
+  cursor: pointer;
+  opacity: 0.9;
 }
 
 .footer-container{
@@ -691,15 +700,79 @@ body{
   gap: calc(45 / 16 * 1rem);
 }
 
-
-
 @media(min-width:48rem){
+  .icon-hamburger, .icon-close{
+    display: none;
+  }
+
   .nav-links-container-2{
-  opacity:1;
+    display: flex;
+    gap: 25px;
+    align-items: center;
+  }
+
+  .nav-link{
+    font-size: calc(10 / 16 * 1rem);
+    font-weight: var(--font-weight-400);
+    letter-spacing: 0.05cm;
+  }
+
+  .nav-btn{
+    height: calc(35 / 16 * 1rem); 
+    width: calc(110 / 16 * 1rem);
+    border-radius: 5px;
+    background-color: var(--primary-red-400);
+    color: var(--white);
+    font-size: calc(10 / 16 * 1rem);
+    font-weight: var(--font-weight-400);
+    transition: background 0.3s ease;
+    letter-spacing: 0.05cm;
+  }
+
+  .nav-btn:hover{
+    cursor: pointer;
+    background-color: var(--white);
+    border:2px solid var(--primary-red-400);
+    color: var(--primary-red-400);
   }
 
   .intro-component{
-    
+    flex-direction: row-reverse;
+    gap: calc(10 / 16 * 1rem);
+  }
+
+  .illustration-hero{
+    width: calc(400 / 16 * 1rem);
+    height: calc(280 / 16 * 1rem);
+    left:-30px;
+  }
+
+  .intro-title{
+    text-align: start;
+  }
+
+  .intro-paragraph{
+    text-align: start;
+  }
+
+  .intro-link-holder{
+    justify-content: start;
+  }
+
+  .intro-link-1:hover{
+    cursor: pointer;
+    border: 2px solid var(--primary-blue-600);
+    background-color: var(--white);
+    color: var(--primary-blue-600);
+    padding-block: 0.75rem;
+  }
+
+  .intro-link-2:hover{
+    cursor: pointer;
+    border: 2px solid var(--neutral-grey);
+    background-color: var(--white);
+    box-shadow: none;
+    padding-block: 0.75rem;
   }
 }
 
