@@ -318,7 +318,7 @@ body {
   background-size: 0% 4px;
   background-repeat: no-repeat;
   background-position: 50% 103.3%;
-  transition: background-size 0.3s ease-in, background-position-x 0.3s ease-in;
+  transition: background-size 0.3s ease-in, background-position-x 0.3s ease-in, color 0.3s ease;
 }
 
 .toggleBtn:first-child {
@@ -709,7 +709,7 @@ body {
     align-items: center;
   }
   .nav-link {
-    font-size: 0.625rem;
+    font-size: 0.65625rem;
     font-weight: var(--font-weight-400);
     letter-spacing: 0.05cm;
   }
@@ -719,8 +719,8 @@ body {
     border-radius: 5px;
     background-color: var(--primary-red-400);
     color: var(--white);
-    font-size: 0.625rem;
-    font-weight: var(--font-weight-400);
+    font-size: 0.65625rem;
+    font-weight: var(--font-weight-500);
     transition: background 0.3s ease;
     letter-spacing: 0.05cm;
   }
@@ -761,6 +761,23 @@ body {
     background-color: var(--white);
     box-shadow: none;
     padding-block: 0.75rem;
+  }
+  .features-component {
+    align-items: center;
+  }
+  .features-paragraph {
+    width: 25rem;
+  }
+  .button-features {
+    flex-direction: row;
+  }
+  .toggleBtn {
+    border-top: none;
+    border-bottom: var(--button-border);
+  }
+  .toggleBtn:hover {
+    cursor: pointer;
+    color: var(--primary-red-400);
   }
 }
 @media (prefers-reduced-motion: reduce) {

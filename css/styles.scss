@@ -319,7 +319,7 @@ body{
   background-size: 0% 4px;
   background-repeat: no-repeat;
   background-position: 50% 103.3%;
-  transition: background-size 0.3s ease-in, background-position-x 0.3s ease-in;
+  transition: background-size 0.3s ease-in, background-position-x 0.3s ease-in, color 0.3s ease;
 }
 
 .toggleBtn:first-child{
@@ -712,7 +712,7 @@ body{
   }
 
   .nav-link{
-    font-size: calc(10 / 16 * 1rem);
+    font-size: calc(10.5 / 16 * 1rem);
     font-weight: var(--font-weight-400);
     letter-spacing: 0.05cm;
   }
@@ -723,8 +723,8 @@ body{
     border-radius: 5px;
     background-color: var(--primary-red-400);
     color: var(--white);
-    font-size: calc(10 / 16 * 1rem);
-    font-weight: var(--font-weight-400);
+    font-size: calc(10.5 / 16 * 1rem);
+    font-weight: var(--font-weight-500);
     transition: background 0.3s ease;
     letter-spacing: 0.05cm;
   }
@@ -773,6 +773,28 @@ body{
     background-color: var(--white);
     box-shadow: none;
     padding-block: 0.75rem;
+  }
+
+  .features-component{
+    align-items: center;
+  }
+
+  .features-paragraph{
+    width: calc(400 / 16 * 1rem);
+  }
+
+  .button-features{
+    flex-direction: row;
+  }
+
+  .toggleBtn{
+    border-top: none;
+    border-bottom: var(--button-border);
+  }
+
+  .toggleBtn:hover{
+    cursor: pointer;
+    color:var(--primary-red-400)
   }
 }
 
